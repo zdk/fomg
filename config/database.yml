@@ -1,0 +1,15 @@
+
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+test:
+  <<: *default
+  host: localhost
+  database: fomg_test
+
+production:
+  <<: *default
+  host: localhost
+  database: fomg
